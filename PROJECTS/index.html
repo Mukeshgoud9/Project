@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   <style>
+       * {
+           margin:0;
+           padding:0;
+           box-sizing:border-box;
+           font-family:'poppins', sans-serif;
+       }
+       .header {
+           position: fixed;
+           top:0;
+           left:0;
+           width:100%;
+           padding:20px 100px;
+           display:flex;
+           justify-content:space-between;
+           align-items:center;
+           z-index:99;
+       }
+       .header .logo {
+           font-size: 2em;
+           color:white;
+           text-decoration:none;
+       }
+
+       .nav a {
+           position: relative;
+           font-size: 1.1em;
+           color: white;
+           text-decoration: none;
+           margin-left: 40px;
+       }
+
+       .nav a::after {
+           content: '';
+           position: absolute;
+           left: 0;
+           bottom: -6px;
+           width: 100%;
+           height: 3px;
+           background: white;
+           border-radius: 5px;
+           transform: scaleX(0);
+           transition: .5s;
+       }
+
+       .nav a:hover::after {
+           transform: scaleX(1);
+       }
+
+       .home {
+           position: relative;
+           width: 100%;
+           height: 100vh;
+           background: url('https://cdn.wallpapersafari.com/46/69/Wb9n1Y.jpg') no-repeat;
+           background-size: cover;
+           background-position: center;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 150px 100px 0 90px;
+       }
+
+       .home .content {
+           max-width: 600px;
+           color: white;
+       }
+
+       .content h2 {
+           font-size: 3em;
+           letter-spacing: .03em;
+           color: white;
+       }
+
+       .content a {
+           color: white;
+           text-decoration: none;
+           border: 2px solid white;
+           font-weight:500;
+           padding: 10px 40px ;
+           border-radius: 40px;
+           transition: .5s;
+       }
+       
+       .content p {
+           margin: 10px 0px 40px;
+           color: white;
+
+       }
+
+       .content a:hover {
+           background: brown;
+       }
+
+       .home .login {
+           position: relative;
+           width: 440px;
+       }
+
+       .login h2 {
+           font-size: 2em;
+           color:white;
+           text-align: center;
+       }
+
+       
+       .login .input-box {
+           position: relative;
+           width: 100%;
+           height: 50px;
+           margin: 40px 0;
+       }
+
+       .input-box input {
+           width:100%;
+           height:100%;
+           background: transparent;
+           border: 1px solid white;
+           color:white;
+           outline: none;
+           border-radius: 40px;
+           font-size: 1em;
+           padding: 0 25px 0 45px;
+           
+       }
+
+       .input-box input:hover {
+           border:groove;
+           border-color:aqua;
+       }
+
+       .input-box label {
+           position: absolute;
+           top: 50%;
+           left: 45px;
+           transform: translateY(-50%);
+           font-size: 1em;
+           color: white;
+           pointer-events: none;
+           transition: .5s;
+       }
+
+       .input-box input:focus~label,
+       .input-box input:valid~label{
+           font-size: .8em;
+           top: -14px;
+           left: 17px;
+       }
+
+       .login .remember-forgot {
+           font-size: .9em;
+           color: white;
+           font-weight: 500;
+           margin: -25px 0 15px;
+           display: flex;
+           justify-content: space-between;
+           padding: 0 60px;
+       }
+
+       .remember-forgot label input {
+           accent-color: brown;
+           margin-right: 3px;
+       }
+
+       .remember-forgot a {
+           color: white;
+           text-decoration:none;
+
+       }
+
+       .remember-forgot a:hover {
+           text-decoration: underline;
+       }
+
+       .login .btn {
+           width: 100%;
+           height: 50px;
+           border:none;
+           outline:none;
+           border-radius: 40px;
+           background: linear-gradient(90deg, brown, white);
+           box-shadow:0 8px 10px rgba(0,0,0,.5);
+           cursor: pointer;
+           font-size: 1.4em;
+           color: white;
+           font-weight: 500;
+           transition: .1s;
+           
+       }
+
+       .login .btn:hover {
+          background: linear-gradient(90deg,white,brown);
+       }
+
+       .login .register-link {
+           font-size: .9em;
+           color: white;
+           text-align: center;
+           margin: 30px 0;
+       }
+
+       .register-link p a {
+           color:white;
+           text-decoration:none;
+           font-weight: 600;
+
+       }
+
+       .register-link p a:hover {
+           text-decoration: underline;
+       }
+
+   </style>
+</head>
+<body>
+    <header class="header">
+        <a herf="#" class="logo">
+            <img src="https://www.nicepng.com/png/full/129-1293351_coffee-cup-icon-coffee-cup-icon-white.png" width="30" height="30">   Coffee
+        </a>
+        <nav class="nav">
+            <a herf="#">Home</a>
+            <a herf="#">About</a>
+            <a herf="#">Menu</a>
+            <a herf="#">Reviews</a>
+            <a herf="#">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="content">
+            <h2>Freshup your Mind...!</h2>
+            <p>Never trust anyone who doesn't drink coffee.
+             "Our culture runs on coffee and gasoline, the first often tasting like the second." 
+            "Science may never come up with a better office communication system than the coffee break." 
+            </p>
+            <a href="#">Get Started</a>
+        </div>
+        <div class="login">
+            <h2>Member Login</h2>
+            <form action="#">
+                <div class="input-box">
+
+                  <input type="email" required />
+                    <label>Enter your email</label>
+                </div>
+                <div class="input-box">
+                   <input type="password" required />
+                    <label>Enter your password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" />
+                        Remember me
+                    </label>
+                    <a herf="#">Forgot password?</a>
+                </div>
+                <button type="submit"
+                        class="btn">Login</button>
+                <div class="register-link">
+                    <p>Not a member?<a herf="#">Sign up</a></p>
+                </div>
+            </form>
+
+        </div>
+    </section>
+</body>
+</html>
